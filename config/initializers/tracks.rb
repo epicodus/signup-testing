@@ -11,6 +11,6 @@ CURRENT_TRACKS = [
   '2020-08-04 to 2020-10-08 PDX Part-Time Intro to Programming',
   '2020-08-04 to 2020-10-08 SEA Part-Time Intro to Programming',
   '2020-08-04 to 2020-10-08 WEB Part-Time Intro to Programming',
-  '2020-08-04 to 2020-12-27 PDX Part-Time JS/React',
-  '2020-08-04 to 2020-12-27 SEA Part-Time JS/React'
+  '2020-08-04 to 2020-12-22 PDX Part-Time JS/React',
+  '2020-08-04 to 2020-12-22 SEA Part-Time JS/React'
 ]
