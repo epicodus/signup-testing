@@ -1,6 +1,7 @@
 CURRENT_TRACKS = [
   '2020-05-26 to 2020-11-27 PDX C#/React',
   '2020-05-26 to 2020-11-27 SEA C#/React',
+  '2020-05-26 to 2020-11-27 WEB C#/React',
   '2020-05-26 to 2020-07-30 PDX Part-Time Intro to Programming',
   '2020-05-26 to 2020-07-30 SEA Part-Time Intro to Programming',
   '2020-05-26 to 2020-07-30 WEB Part-Time Intro to Programming',
