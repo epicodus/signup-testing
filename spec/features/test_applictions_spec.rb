@@ -11,7 +11,6 @@ feature 'leads created when application filled out' do
       'custom.lcf_4qKJ9VGRB1DYjwFSOnrDBowHD4rxBT6KmS82HqU9uoQ': 'Yes',
       'custom.lcf_A6Wt06IbJVBIWiqgOKWveZjWmd1SJNrExmA6mFse0qT': 'Yes',
       'custom.lcf_qogMsgZA0BqO8EhNvX7ArkNqSteDR68to4YbYP9uqeX': 'Yes',
-      'custom.lcf_0aPv5aV0sBgfwzMLNUR6zkbWvY2Fq9AKN3nDKxUt5Ru': 'NPR (or somebody heard on NPR and told me)'
     }
   }
 

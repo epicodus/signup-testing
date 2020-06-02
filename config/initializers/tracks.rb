@@ -18,5 +18,3 @@ CURRENT_TRACKS = [
   '2020-10-13 to 2021-04-04 SEA Part-Time JS/React',
   '2020-10-13 to 2021-04-04 WEB Part-Time JS/React'
 ]
-# REMOVED: 2020-08-04 to 2020-12-22 PDX Part-Time JS/React
-# REMOVED: 2020-08-04 to 2020-12-22 SEA Part-Time JS/React
