@@ -1,0 +1,4 @@
+cd ~/signup-testing
+bundle exec rspec spec/features/form_filler_spec.rb
+sleep 60
+bundle exec rspec spec/features/test_applictions_spec.rb

@@ -1,0 +1,14 @@
+cd ~/signup-testing
+bundle exec rspec spec/features/manual_testing/1_action_fill_form_spec.rb
+sleep 60
+bundle exec rspec spec/features/manual_testing/2_test_application_spec.rb
+read -p 'Press a key to mark as accepted...'
+bundle exec rspec spec/features/manual_testing/3_action_crm_accept_spec.rb
+sleep 300
+bundle exec rspec spec/features/manual_testing/4_test_accepted_spec.rb
+read -p 'Press a key to mark as enrolled...'
+bundle exec rspec spec/features/manual_testing/5_action_crm_enroll_spec.rb
+sleep 300
+bundle exec rspec spec/features/manual_testing/6_test_enrolled_spec.rb
+read -p 'Press a key to clear test leads...'
+heroku run rake clear_test_leads -a epicodus-epicenter
