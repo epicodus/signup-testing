@@ -16,6 +16,10 @@ class Crm
     lead.try('dig', Rails.application.config.x.crm_fields['COHORT_APPLIED'])
   end
 
+  def cohort_starting
+    lead.try('dig', Rails.application.config.x.crm_fields['COHORT_STARTING'])
+  end
+
   def cohort_current
     lead.try('dig', Rails.application.config.x.crm_fields['COHORT_CURRENT'])
   end
