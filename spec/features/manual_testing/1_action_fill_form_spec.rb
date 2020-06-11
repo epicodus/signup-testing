@@ -7,20 +7,17 @@ phone_field = 'Field14'
 location_selection_field = 'Field254'
 location_names = { 'PDX' => 'Portland', 'SEA' => 'Seattle', 'WEB' => 'Online' }
 location_fields = { 'Portland' => 'Field256', 'Seattle' => 'Field258', 'Online' => 'Field1323' }
-over18_field = 'Field774'
-diploma_field = 'Field775'
 
 describe 'form filling' do
-  it 'fills out /apply form for each track', js: true do
+  it 'fills out /sign-up form for each track', js: true do
     CURRENT_TRACKS.each_with_index do |track, index|
       location = location_names[track.split[3]]
-      visit "https://www.epicodus.com/?gclid=test_gclid_#{index+1}&sqf_source=test_sqf_source_#{index+1}"
       visit "https://www.epicodus.com/sign-up"
       sleep 5
       page.within_frame('wufooFormz12e0pp21gzvlw1') do
-        fill_in first_name_field, with: 'Manual'
-        fill_in last_name_field, with: "Test-#{location}-#{index+1}"
-        fill_in email_field, with: "manual-test-#{location.downcase}-#{index+1}@mortalwombat.net"
+        fill_in first_name_field, with: 'Test'
+        fill_in last_name_field, with: "#{track}"
+        fill_in email_field, with: "#{track.parameterize}@mortalwombat.net"
         fill_in phone_field, with: "#{index}#{index}#{index}-#{index+1}#{index+1}#{index+1}-#{index+2}#{index+2}#{index+2}#{index+2}"
         select location, from: location_selection_field
         select track, from: location_fields[location]
@@ -28,7 +25,6 @@ describe 'form filling' do
         click_button 'Sign up!'
       end
       sleep 5
-      expect(page).to have_content 'Thanks for signing up!'
     end
   end
 end
