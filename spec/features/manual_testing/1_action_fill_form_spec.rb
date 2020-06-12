@@ -17,7 +17,7 @@ describe 'form filling' do
       page.within_frame('wufooFormz12e0pp21gzvlw1') do
         fill_in first_name_field, with: 'Test'
         fill_in last_name_field, with: "#{track}"
-        fill_in email_field, with: "#{track.parameterize}@mortalwombat.net"
+        fill_in email_field, with: "#{track.parameterize}|#{SecureRandom.urlsafe_base64(5)}@mortalwombat.net"
         fill_in phone_field, with: "#{index}#{index}#{index}-#{index+1}#{index+1}#{index+1}-#{index+2}#{index+2}#{index+2}#{index+2}"
         select location, from: location_selection_field
         select track, from: location_fields[location]

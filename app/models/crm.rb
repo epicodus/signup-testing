@@ -99,7 +99,7 @@ class Crm
 private
 
   def lead
-    @lead ||= close_io_client.list_leads('email: "' + @email + '"')['data'].first
+    @lead ||= close_io_client.list_leads('email: ' + @email)['data'].first
   end
 
   def close_io_client
