@@ -24,6 +24,10 @@ class Crm
     lead.try('dig', Rails.application.config.x.crm_fields['COHORT_CURRENT'])
   end
 
+  def cohort_parttime
+    lead.try('dig', Rails.application.config.x.crm_fields['COHORT_PARTTIME'])
+  end
+
   def invitation_token_present?
     lead.try('dig', Rails.application.config.x.crm_fields['INVITATION_TOKEN']).present?
   end
