@@ -22,7 +22,7 @@ describe 'form filling' do
         fill_in last_name_field, with: "Test"
         fill_in email_field, with: "automated-test-#{location.downcase}-#{index+1}@example.com"
         fill_in phone_field, with: '123-456-7890'
-        select location, from: location_selection_field
+        select location == 'Online' ? 'Somewhere else' : location, from: location_selection_field
         select track, from: location_fields[location]
         all('input[value=Yes]').map(&:choose)
         click_button 'Sign up!'

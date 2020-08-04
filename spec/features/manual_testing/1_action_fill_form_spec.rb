@@ -19,7 +19,7 @@ describe 'form filling' do
         fill_in last_name_field, with: "#{track}"
         fill_in email_field, with: "#{track.parameterize}|#{SecureRandom.urlsafe_base64(5)}@mortalwombat.net"
         fill_in phone_field, with: "#{index}#{index}#{index}-#{index+1}#{index+1}#{index+1}-#{index+2}#{index+2}#{index+2}#{index+2}"
-        select location, from: location_selection_field
+        select location == 'Online' ? 'Somewhere else' : location, from: location_selection_field
         select track, from: location_fields[location]
         all('input[value=Yes]').map(&:choose)
         click_button 'Sign up!'
