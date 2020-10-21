@@ -3,11 +3,10 @@ CURRENT_TRACKS = [
   '2021-01-04 to 2021-07-09 SEA C#/React',
   '2021-01-04 to 2021-07-09 WEB Ruby/React',
   '2021-01-04 to 2021-07-09 WEB C#/React',
-  '2021-01-04 to 2021-10-10 PDX Part-Time Ruby/React',
+  '2021-01-04 to 2021-10-10 PDX Part-Time C#/React',
   '2021-01-04 to 2021-10-10 SEA Part-Time C#/React',
-  '2021-01-04 to 2021-10-10 WEB Part-Time Ruby/React',
   '2021-01-04 to 2021-10-10 WEB Part-Time C#/React',
-  '2021-01-04 to 2021-02-14 PDX Part-Time Intro to Programming',
-  '2021-01-04 to 2021-02-14 SEA Part-Time Intro to Programming',
-  '2021-01-04 to 2021-02-14 WEB Part-Time Intro to Programming'
+  '2021-01-04 to 2021-02-10 PDX Part-Time Intro to Programming',
+  '2021-01-04 to 2021-02-10 SEA Part-Time Intro to Programming',
+  '2021-01-04 to 2021-02-10 WEB Part-Time Intro to Programming'
 ]
