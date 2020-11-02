@@ -34,12 +34,12 @@ class Crm
 
   def career_services_contact_pdx?
     user = lead.try('dig', Rails.application.config.x.crm_fields['CAREER_SERVICES_CONTACT'])
-    user == Rails.application.config.x.crm_ids['USER_ELENA'] || user == Rails.application.config.x.crm_ids['USER_NINA']
+    user == Rails.application.config.x.crm_ids['USER_NINA'] || user == Rails.application.config.x.crm_ids['USER_CHAR']
   end
 
   def career_services_contact_sea_web?
     user = lead.try('dig', Rails.application.config.x.crm_fields['CAREER_SERVICES_CONTACT'])
-    user == Rails.application.config.x.crm_ids['USER_CAMERON']
+    user == Rails.application.config.x.crm_ids['USER_CAMERON'] || user == Rails.application.config.x.crm_ids['USER_JIAQI']
   end
 
   def received_email_assessment?
@@ -55,15 +55,15 @@ class Crm
   end
 
   def orientation_template_pdx?
-    orientation_template['body_text'].include? '400 SW 6th Ave'
+    orientation_template['body_text'].include? 'stay-at-home order'
   end
 
   def orientation_template_sea?
-    orientation_template['body_text'].include? '1402 3rd Avenue'
+    orientation_template['body_text'].include? 'stay-at-home order'
   end
 
   def orientation_template_web?
-    orientation_template['body_text'].include? 'Discord'
+    orientation_template['body_text'].include? 'class using Discord'
   end
 
   def orientation_template_ft?
@@ -71,15 +71,15 @@ class Crm
   end
 
   def orientation_template_pt?
-    orientation_template['body_text'].include?('5:30pm') || orientation_template['body_text'].include?('6pm')
+    orientation_template['body_text'].include?('6pm')
   end
 
   def orientation_template_id_match?
     location = cohort_applied.split[3]
     if cohort_applied.include? 'Part-Time Intro to Programming'
-      style = 'PT'
-    elsif cohort_applied.include? 'JS/React'
-      style = 'JS_REACT'
+      style = 'PT_INTRO'
+    elsif cohort_applied.include? 'Part-Time C#/React'
+      style = 'PT_FULL_STACK'
     else
       style = 'FT'
     end
