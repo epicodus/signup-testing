@@ -34,7 +34,7 @@ class Crm
 
   def career_services_contact_pdx?
     user = lead.try('dig', Rails.application.config.x.crm_fields['CAREER_SERVICES_CONTACT'])
-    user == Rails.application.config.x.crm_ids['USER_NINA'] || user == Rails.application.config.x.crm_ids['USER_CHAR']
+    user == Rails.application.config.x.crm_ids['USER_JASMINE'] || user == Rails.application.config.x.crm_ids['USER_CHAR']
   end
 
   def career_services_contact_sea_web?
